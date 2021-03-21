@@ -29,7 +29,7 @@ export const About = () => {
         </h1>
 
         <br/>
-        <p className="description"> Connected with the world of web developlment and have been intrested in technology for as long as I can remember. </p>
+        <p className="description"> Click on a porject to learn more. </p>
         <br/>
         <br/>
         <br/>

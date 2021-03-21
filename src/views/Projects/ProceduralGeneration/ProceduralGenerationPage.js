@@ -47,9 +47,8 @@ export const About = () => {
         <p className="paragraph">
         based on height and steepness of that region. This allows for very natural terrain texturing with mountain ranges with tufts of grass on the sides and snow at its peck with rocky cliff faces. The Tool gives the option for generating different types of terrain like Perlin noise, Voronoi diagram, Diamond-Square algorithms/random midpoint displacement. Also, It allows for Height maps images to be loaded and projected on the Terrain.
         </p>
-        <br/>
-        <br/>
-        <button href="google.com" class="button button1" href="http://mattchang.lilcode.com/portfolio/proc-gen/">Test it out!</button>
+        
+        
         <br/>
         <br/>
         <blockquote className ="codeShowcase"><pre><code>
@@ -83,9 +82,14 @@ export const About = () => {
         <p className="paragraph">
         Here is the code that governs the Vornoi Terrian geneartion these nested for loops are responsible for traversing the 2D array and populating it with the correct height values that it calclates. It then takes the 2d array and stores it as height data for the terrian
         </p>
+        <br/>
+        <br/>  
+
+        <button href="google.com" class="button button1" href="http://mattchang.lilcode.com/portfolio/proc-gen/">Test it out!</button>
 
 
         <Navbar/>
+
         </div>
     );
 } 

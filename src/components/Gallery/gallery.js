@@ -28,7 +28,7 @@ export const Gallery = () => {
                 </figure>
 
                 <figure>
-                    <a href="/about">
+                    <a href="/project/machineLearning">
                         <img href="/about" class="item" src={MLIcon} alt="Example image"></img>
                     </a>
                     <figcaption>Machine Learning</figcaption>

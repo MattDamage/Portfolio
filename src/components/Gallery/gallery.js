@@ -7,6 +7,7 @@ import MLIcon from "../../assets/img/portfolio/BumpDiffuseExample.png";
 import ProcGenIcon from "../../assets/img/portfolio/ProceduralGeneration/Proc.png";
 import ShadersIcon from "../../assets/img/portfolio/Machine Learning/Machine LearningThumbNail.png";
 
+
 export const Gallery = () => {
     return (
         <div> 
@@ -21,8 +22,8 @@ export const Gallery = () => {
                 </figure>
 
                 <figure>
-                    <a href="/about">
-                        <img href="/about" class="item" src={ShadersIcon} alt="Example image"></img>
+                    <a href="/project/shaders">
+                        <img href="/project/shaders" class="item" src={ShadersIcon} alt="Example image"></img>
                     </a>
                     <figcaption>Shaders</figcaption>
                 </figure>

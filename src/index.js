@@ -14,6 +14,7 @@ import HomePage from "views/HomePage/HomePage2.js";
 import About from "views/AboutPage/AboutPage.js";
 import ProceduralGenerationPage from "views/Projects/ProceduralGeneration/ProceduralGenerationPage.js";
 import MachineLearning from "views/Projects/MachineLearning/MachineLearning.js";
+import Shaders from "views/Projects/Shaders/Shaders.js";
 var hist = createBrowserHistory();
 
 ReactDOM.render(
@@ -24,7 +25,9 @@ ReactDOM.render(
       <Route path="/about" component={About} />
       <Route path="/project/proc-gen" component={ProceduralGenerationPage} />
       <Route path="/project/machineLearning"y component={MachineLearning} />
+      <Route path="/project/shaders"y component={Shaders} />
       <Route path="/" component={HomePage} />
+      
     
     </Switch>
   </Router>,

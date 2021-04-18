@@ -6,7 +6,7 @@ import Background from "../../assets/img/Name.png"
 import MLIcon from "../../assets/img/portfolio/BumpDiffuseExample.png";
 import ProcGenIcon from "../../assets/img/portfolio/ProceduralGeneration/Proc.png";
 import ShadersIcon from "../../assets/img/portfolio/Machine Learning/Machine LearningThumbNail.png";
-
+import MobaIcon from "../../assets/img/portfolio/Moba/SS1.png";
 
 export const Gallery = () => {
     return (
@@ -36,10 +36,10 @@ export const Gallery = () => {
                 </figure>
 
                 <figure>
-                    <a href="/about">
-                    <img href="/about" class="item" src="https://source.unsplash.com/random/320x240" alt="Example image"></img>
+                    <a href="/project/moba">
+                    <img href="/project/moba" class="item" src={MobaIcon} alt="Moba game"></img>
                     </a>
-                    <figcaption>A random image</figcaption>
+                    <figcaption>Moba game</figcaption>
                 </figure>
 
                 <figure>

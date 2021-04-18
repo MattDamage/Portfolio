@@ -52,52 +52,34 @@ export const About = () => {
         </p>
         <h1 className ="header">PBR Shader:</h1>
         <p className="paragraph">
-        This is an example of a very cool type of shader a PBR shader. PBR stands for physically based rendering.
+        This is an example of a very cool type of shader a PBR shader. PBR stands for physically based rendering. Its based of how light would physically interact with objects. It aims are acheving photo realism. In order to allow the shader to simulate how light would reflect of an object you need give extra information to the shader. This extra information is most commonly in the form of image maps. For example this simple PBR showcase takes in not just the standard abledo texutre but it also takes in a metallic map, emission map, and smoothness map. A map tells the shader what parts of the surface should be metallic and how metallic should they be. The smoothness map tells how smooth parts of the object should be. This does not change the gemoetry but light interacts differently with smooth surfaces for example a well polished car body. And finally an emission map. This is not vital for a PBR shader but its neat to add. Some parts of the surface can be told to look like they are giving off light. This would be usefull for like a glowing lava material. the emission map controls this self illumation process.
         </p>
         <br/>
         <blockquote className ="codeShowcase"><pre><code>
-         {'void UpdateWeights(List<double> outputs, List<double> desiredOutput)'}  <br/>
-         {'{'}  <br/>
-         {'    for(int i = numHidden; i >= 0; i--)'}  <br/>
-         {'    {'}  <br/>
-         {'         if(i == numHidden)'}  <br/>
-         {'         {'}  <br/>
-         {'         error = desiredOutput[j] - outputs[j];'}  <br/>
-         {'         layers[i].neurons[j].errorGradient = outputs[j] * (1-outputs[j]) * error;'}  <br/>
-         {'         }'}  <br/>
-         {'         else'}  <br/>
-         {'         {'}  <br/>
-         {'             layers[i].neurons[j].errorGradient = layers[i].neurons[j].output * (1-layers[i].neurons[j].output);'}  <br/>
-         {'             double errorGradSum = 0;'}  <br/>
-         {'             for(int p = 0; p < layers[i+1].numNeurons; p++)'}  <br/>
-         {'             {'}  <br/>
-         {'                 errorGradSum += layers[i+1].neurons[p].errorGradient * layers[i+1].neurons[p].weights[j];'}  <br/>
-         {'             }'}  <br/>
-         {'             layers[i].neurons[j].errorGradient *= errorGradSum;'}  <br/>
-         {'          }'}  <br/>
-         {'          for(int k = 0; k < layers[i].neurons[j].numInputs; k++)'}  <br/>
-         {'          {'}  <br/>
-         {'             if(i == numHidden)'}  <br/>
-         {'             {'}  <br/>
-         {'                  error = desiredOutput[j] - outputs[j];'}  <br/>
-         {'                  layers[i].neurons[j].weights[k] += alpha * layers[i].neurons[j].inputs[k] * error;'}  <br/>
-         {'                  }'}  <br/>
-         {'                  else'}  <br/>
-         {'                  {'}  <br/>
-         {'                     layers[i].neurons[j].weights[k] += alpha * layers[i].neurons[j].inputs[k] * layers[i].neurons[j].errorGradient;'}  <br/>
-         {'                  }'}  <br/>
-         {'             }'}  <br/>
-         {'             layers[i].neurons[j].bias += alpha * -1 * layers[i].neurons[j].errorGradient;'}  <br/>
-         {'          }'}  <br/>
-         {'    }'}  <br/>
+         {'#pragma surface surf Lambert alpha:fade'}  <br/>
+         {'struct Input {'}  <br/>
+         {'    float3 viewDir;'}  <br/>
+         {''}  <br/>
+         {'float4 _RimColor;'}  <br/>
+         {'float _RimPower;'}  <br/>
+         {' '}  <br/>
+         {'void surf (Input IN, inout SurfaceOutput o) {'}  <br/>
+         {'    half rim = 1.0 - saturate(dot (normalize(IN.viewDir), o.Normal));'}  <br/>
+         {'    o.Emission = _RimColor.rgb * pow (rim, _RimPower) * 1000 * _SinTime;'}  <br/>
+         {'    o.Alpha = pow (rim, _RimPower);'}  <br/>
+         {'}'}  <br/>
+        
          {'}'}  <br/>
          
+
+
+
          
         </code></pre></blockquote>
        
 
         <p className="paragraph">
-       Here is the compute shader that makes the PBR shader possible. 
+      Here is an example of compute shader that combine elements of the previous teciques to make something unique. This compute shader creates a hologram effect on whatever 3d object you apply the shader to.
         </p>
         <br/>
         <br/>  

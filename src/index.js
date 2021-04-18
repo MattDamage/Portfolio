@@ -15,6 +15,7 @@ import About from "views/AboutPage/AboutPage.js";
 import ProceduralGenerationPage from "views/Projects/ProceduralGeneration/ProceduralGenerationPage.js";
 import MachineLearning from "views/Projects/MachineLearning/MachineLearning.js";
 import Shaders from "views/Projects/Shaders/Shaders.js";
+import Moba from "views/Projects/Moba/Moba.js";
 var hist = createBrowserHistory();
 
 ReactDOM.render(
@@ -26,6 +27,7 @@ ReactDOM.render(
       <Route path="/project/proc-gen" component={ProceduralGenerationPage} />
       <Route path="/project/machineLearning"y component={MachineLearning} />
       <Route path="/project/shaders"y component={Shaders} />
+      <Route path="/project/moba"y component={Moba} /> 
       <Route path="/" component={HomePage} />
       
     

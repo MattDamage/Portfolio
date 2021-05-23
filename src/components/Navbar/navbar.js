@@ -17,7 +17,7 @@ export const Navbar = () => {
         <br/>
         <a href="/about">About</a>
         <br/>
-        <a href="#my skills">My Skills</a>
+        <a href="/blog">Blog</a>
         <br/>
         <a href="/portfolio">Portfolio</a>
       

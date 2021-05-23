@@ -12,10 +12,17 @@ import PortfolioPage from "views/PortfolioPage/PortfolioPage.js";
 import LoginPage from "views/LoginPage/LoginPage.js";
 import HomePage from "views/HomePage/HomePage2.js";
 import About from "views/AboutPage/AboutPage.js";
+import Blog from "views/BlogPage/BlogPage.js";
+
+//#region Portfolio Pages
 import ProceduralGenerationPage from "views/Projects/ProceduralGeneration/ProceduralGenerationPage.js";
 import MachineLearning from "views/Projects/MachineLearning/MachineLearning.js";
 import Shaders from "views/Projects/Shaders/Shaders.js";
 import Moba from "views/Projects/Moba/Moba.js";
+//#endregion
+
+
+
 var hist = createBrowserHistory();
 
 ReactDOM.render(
@@ -24,6 +31,8 @@ ReactDOM.render(
       <Route path="/landing-page" component={LandingPage} />
       <Route path="/portfolio" component={PortfolioPage} />
       <Route path="/about" component={About} />
+      <Route path="/blog" component={Blog} />
+
       <Route path="/project/proc-gen" component={ProceduralGenerationPage} />
       <Route path="/project/machineLearning"y component={MachineLearning} />
       <Route path="/project/shaders"y component={Shaders} />

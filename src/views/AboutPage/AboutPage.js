@@ -38,7 +38,7 @@ export const About = () => {
 
         <Navbar/>
         </div>
-    );
+    ); 
 } 
 
 export default About;
